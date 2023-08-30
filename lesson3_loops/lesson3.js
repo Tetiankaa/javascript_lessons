@@ -91,16 +91,16 @@ do {
 
 //document.write() is a method that is used to write content directly to the HTML document.
 
-//The for loop is a fundamental control structure that allows to repeatedly execute a block of code for a specified number of times.
+//The "for" loop is a fundamental control structure that allows to repeatedly execute a block of code for a specified number of times.
 // It's especially useful for iterating over arrays, performing numerical calculations, and executing a sequence of actions.
 //As long as the condition is true, the loop will continue to execute
 
-// The for of loop allows to iterate over all elements without dealing with indexes.
+// The "for of" loop allows to iterate over all elements without dealing with indexes.
 
-//The for in loop is used to iterate over the keys (property names) of the object.
+//The "for in" loop is used to iterate over the keys (property names) of the object.
 
-//The while loop  allows to repeatedly execute a block of code as long as a specified condition is true.
+//The "while" loop  allows to repeatedly execute a block of code as long as a specified condition is true.
 
-//The do...while  defines a code block to be executed once, and repeated as long as a condition is true.
+//The "do...while"  defines a code block to be executed once, and repeated as long as a condition is true.
 // The do...while is used when you want to run a code block at least one time.
 
