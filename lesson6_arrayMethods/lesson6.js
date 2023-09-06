@@ -172,7 +172,8 @@ console.log(reduce);
 //   pop(): Removes and returns the last element from an array.
 //   join(separator): Converts all elements of an array into a string, separated by the specified separator.
 //   concat(array): Combines two or more arrays and returns a new array.
-//   slice(startIndex, endIndex): Returns a shallow copy of a portion of an array from the specified start index to the end index (exclusive).
+//   slice(startIndex, endIndex): extracts a section of a string from the specified start index to the end index (exclusive),
+// and returns it as a new string, without modifying the original string
 //   splice(): adds or removes array elements.
 //   includes(): returns true if an array contains a specified string.
 //   reverse(): reverses the order of the elements in an array.

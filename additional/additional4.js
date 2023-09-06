@@ -26,3 +26,18 @@ for (let i = 0; i < 20; i++) {
    randomArray.push(Math.floor(Math.random() * 732)+8)
 }
 console.log(randomArray);
+
+//*****
+let cardSuit = [
+    {suit:'spade',color:"black"},
+    {suit:'diamond',color:"red"},
+    {suit:'heart',color:"red"},
+    {suit:'clubs',color:"black"}]
+let cardVAlues = [6,7,8,9,10,'ace','jack','queen','king'];
+
+let cardsGenerate = cardSuit.reduce(function (acc,suit) {
+    let suitCards = cardVAlues.map(value1 => ({...suit,value1}))
+
+    return [...acc,...suitCards]
+},[]);
+console.log(cardsGenerate)
