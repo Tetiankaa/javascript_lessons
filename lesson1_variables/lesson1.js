@@ -109,8 +109,8 @@ console.log(prompt("enter your age"));
 // - It returns "boolean" for booleans
 
 //Casting refers to the process of converting a value from one data type to another.
-// You can explicitly convert other data types to strings using the String() function or the .toString() method.
-// You can explicitly convert strings or other types to numbers using the Number() function or the parseInt() and parseFloat() functions or adding + before string
+// You can convert other data types to strings using the String() function or the .toString() method.
+// You can convert strings or other types to numbers using the Number() function or the parseInt() and parseFloat() functions or adding + before string
 // For converting to integers, you can use the parseInt() function with a specified radix (usually 10).
 // You can convert values to booleans using the Boolean() function or adding !!(logical NOT operator ) before value
 

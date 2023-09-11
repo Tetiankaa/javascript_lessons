@@ -41,3 +41,6 @@ let cardsGenerate = cardSuit.reduce(function (acc,suit) {
     return [...acc,...suitCards]
 },[]);
 console.log(cardsGenerate)
+
+
+

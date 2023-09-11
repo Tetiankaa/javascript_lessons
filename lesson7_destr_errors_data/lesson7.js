@@ -182,7 +182,26 @@ console.log(user9 === user8);
 console.log(user9.wife === user8.wife);
 console.log(user9.func() === user8.func());
 
+//**
+let user10 = {
+    name: "vasya",
+    age: 26,
+    wife:{
+        name:"Marina"
+    },
+    foo(a,b){
+        return a+b
+    }
+};
+let user11 = Object.assign(user10);
 
+console.log(user10.foo(10,20));
+user11.foo = function (a,b){return  a*b}
+user11.wife.name = "iiiii"
+
+console.log(user11.foo(10, 20));
+console.log(user10.foo(2,7))
+console.log(user10)
 
 
 //Date object is used to work with dates and times. This will give us the current date and time.
@@ -209,10 +228,11 @@ console.log(user9.func() === user8.func());
 //      3. Adding Elements to Arrays([...originalArray, 4])
 //      4. Merge objects into a new one (inner objects still have the same reference)
 //      5. Clone an object and update specific properties in a single expression
+// Spred doesn't work with inner objects. They still  have the same reference and can be changed in the original obj too.
 
 // JSON.stringify() is used to convert a JavaScript object or value into a JSON string.
 // JSON.parse() is used to parse a JSON string and convert it into a JavaScript object.
 // JSON (JavaScript Object Notation) can represent objects, arrays, strings, numbers, booleans, and null, but not functions or undefined.
 
 //Object.assign()  is used to  copy the values of all enumerable properties from one or more source objects into a target object.
-// If the properties themselves are objects, those objects are still referenced and not deeply cloned.
+// If the properties themselves are objects or functions, those objects and functions are still referenced and not deeply cloned.

@@ -91,7 +91,7 @@ do {
 
 //document.write() is a method that is used to write content directly to the HTML document.
 
-//The "for" loop is a fundamental control structure that allows to repeatedly execute a block of code for a specified number of times.
+//The "for" loop  allows to repeatedly execute a block of code for a specified number of times.
 // It's especially useful for iterating over arrays, performing numerical calculations, and executing a sequence of actions.
 //As long as the condition is true, the loop will continue to execute
 
