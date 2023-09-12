@@ -216,6 +216,7 @@ console.log(user10)
 //throw statement is used to manually create and throw custom exceptions.
 
 // The optional chaining operator ?.  -  It's used to simplify property access when dealing with potentially undefined or null values in object chains.
+// The optional chaining operator (?.) is used to safely access properties of an object when you're not sure if those properties exist.
 //. If any part of the chain is undefined, the result of the entire expression will be undefined rather than throwing an error.
 
 //Destructuring is a feature that allows to extract values from objects or arrays and assign them to variables.
