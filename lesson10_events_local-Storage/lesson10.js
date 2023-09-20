@@ -1,13 +1,21 @@
 // forms
-console.log(document.forms);
-let form1 = document.forms['form_1'];
-console.log(form1);
+//console.log(document.forms);
+//let form1 = document.forms['form_1'];
+// console.log(form1);
+//
+// console.log(form1.login);
+// console.log(form1.password);
+//
+// const firstForm = document.forms[0];
+// console.log(firstForm.elements);
 
-console.log(form1.login);
-console.log(form1.password);
-
-const firstForm = document.forms[0];
-console.log(firstForm.elements);
+let forms = document.forms;
+console.log(forms.length);
+console.log(forms[0].name);
+console.log(forms.item(0).name);
+console.log(forms[0].elements[1].name);
+console.log(forms[0].elements[1].value);
+console.log(forms.namedItem("form_2").innerHTML);
 
 //events
 // window.onload = function () {
@@ -29,35 +37,35 @@ target.onclick = function () {
         flag = !flag;
     }
 }
-
-form1.onsubmit = function (event) {
-    event.preventDefault();
-    console.log('submit'); // is possible to use only 1 time
-}
-
-form1.addEventListener('submit', function (e) { // is possible to use many times
-    e.preventDefault();
-    console.log(this.login.value);
-    console.log(this.password.value);
-});
-
-form1.password.onfocus = function () {
-    this.type = 'text';
-}
-form1.password.onblur = function () {
-    this.type = 'password';
-}
+//
+// form1.onsubmit = function (event) {
+//     event.preventDefault();
+//     console.log('submit'); // is possible to use only 1 time
+// }
+//
+// form1.addEventListener('submit', function (e) { // is possible to use many times
+//     e.preventDefault();
+//     console.log(this.login.value);
+//     console.log(this.password.value);
+// });
+//
+// form1.password.onfocus = function () {
+//     this.type = 'text';
+// }
+// form1.password.onblur = function () {
+//     this.type = 'password';
+// }
 
 // local storage
 
-form1.addEventListener('submit', function (e) {
-    e.preventDefault();
-    let login = this.login.value;
-    let password = this.password.value;
-
-    let obj = {login, password};
-    localStorage.setItem('userData', JSON.stringify(obj));
-});
+// form1.addEventListener('submit', function (e) {
+//     e.preventDefault();
+//     let login = this.login.value;
+//     let password = this.password.value;
+//
+//     let obj = {login, password};
+//     localStorage.setItem('userData', JSON.stringify(obj));
+// });
 
 console.log(localStorage.getItem('userData'));
 

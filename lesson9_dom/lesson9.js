@@ -71,7 +71,7 @@ document.body.append(p,cloneP,p.cloneNode(true));
 
 // children - returns a collection (HTMLCollection) of only the element nodes among an element's child nodes.
 
-//childNodes - returns a NodeList containing all child nodes of an element, including element nodes, text nodes, comments, and other types of nodes.
+//childNodes - returns a NodeList containing all element's child nodes, including element nodes, text nodes, comments, and other types of nodes.
 
 // createElement - is used to create new HTML element
 
