@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="text"></h1>
+<script>
+    let url = new URL(location.href);
+    let quoteJSON =  url.searchParams.get('value');
+    let quote = JSON.parse(quoteJSON);
+    console.log(quote);
+
+    let text = document.getElementById('text');
+    text.innerText = quote.quote;
+    text.style.fontFamily = 'Playfair Display';
+    text.style.fontStyle = 'italic';
+
+    document.body.appendChild(text)
+</script>
+
+</body>
+</html>

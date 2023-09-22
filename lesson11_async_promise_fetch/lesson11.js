@@ -10,28 +10,30 @@ console.log('3');
 // },1000);
 
 //  FETCH
-// fetch('https://dummyjson.com/products')
-//     .then(response => response.json())
-//     .then((productsResponse)=>{
-//         let {products} = productsResponse;
-//
-//         for (const product of products) {
-//             let div = document.createElement('div');
-//
-//             let h2 = document.createElement('h2');
-//             let p = document.createElement('p');
-//             let img = document.createElement('img');
-//
-//             h2.innerText = product.title;
-//             p.innerText = product.description;
-//             img.src = product.thumbnail;
-//
-//             div.append(h2,p,img);
-//
-//             document.body.appendChild(div);
-//         }
-//         }
-//     )
+fetch('https://dummyjson.com/products')
+    .then(response => response.json())
+    .then((productsResponse)=>{
+        let {products} = productsResponse;
+
+
+        for (const product of products) {
+
+            let div = document.createElement('div');
+
+            let h2 = document.createElement('h2');
+            let p = document.createElement('p');
+            let img = document.createElement('img');
+
+            h2.innerText = product.title;
+            p.innerText = product.description;
+            img.src = product.thumbnail;
+
+            div.append(h2,p,img);
+
+            document.body.appendChild(div);
+        }
+        }
+    )
 
 // new Promise
 
