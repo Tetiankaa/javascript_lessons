@@ -498,16 +498,18 @@ console.log(sort);
 
 // arrow functions - compact alternative to a traditional functions
 
-let numbers3 = [50,10,30,40,570,100]; [570,10,40,100,50,30];
-numbers3.sort((a,b) => b-a).forEach(item => console.log(item));
+let numbers3 = [50, 10, 30, 40, 570, 100];
+[570, 10, 40, 100, 50, 30];
+numbers3.sort((a, b) => b - a).forEach(item => console.log(item));
 
 //*****
-let cards = ['ace','jack','queen','king','joker',6,7,8,9,10];
+let cards = ['ace', 'jack', 'queen', 'king', 'joker', 6, 7, 8, 9, 10];
 console.log(cards)
+
 function shuffle(array) {
     let currentIndex = array.length;
 
-    while (currentIndex !== 0){
+    while (currentIndex !== 0) {
         let randomIndex = Math.floor(Math.random() * array.length);
         currentIndex--;
 
@@ -517,6 +519,7 @@ function shuffle(array) {
     }
     return array;
 }
+
 let shuffledCards = shuffle(numbers3);
 console.log(shuffledCards);
 
@@ -524,16 +527,19 @@ console.log(shuffledCards);
 
 let userName = "User586914_*_*";
 let userInbox = 3;
+
 function login() {
 
     displayUserName();
     displayUserInbox();
-  function displayUserName() {
-      console.log(`Welcome ${userName}`)
-  }
-  function displayUserInbox() {
-      console.log(`You have ${userInbox} new messages`)
-  }
+
+    function displayUserName() {
+        console.log(`Welcome ${userName}`)
+    }
+
+    function displayUserInbox() {
+        console.log(`You have ${userInbox} new messages`)
+    }
 }
 
 login();
@@ -541,13 +547,13 @@ login();
 // Map - object that holds key-value pairs of any data type
 
 const store = new Map([
-   ["t-shirt",20],
-    ["jeans",30],
-    ["socks",10],
-    ["underwear",50]
+    ["t-shirt", 20],
+    ["jeans", 30],
+    ["socks", 10],
+    ["underwear", 50]
 ]);
 
-store.forEach((value,key)=>console.log(`${key} ${value}`));
+store.forEach((value, key) => console.log(`${key} ${value}`));
 
 console.log(store.get("jeans"));
 console.log(store.set("hat", 25));
@@ -561,14 +567,14 @@ console.log(store.has("socks"));
 // Properties - what an object has
 // Methods - what an object can do
 
-const  car1 = {
-    model:"Mustang",
-    color:"red",
-    year:2023,
-    drive:function (){
+const car1 = {
+    model: "Mustang",
+    color: "red",
+    year: 2023,
+    drive: function () {
         console.log("You drive the car");
     },
-    brake:function () {
+    brake: function () {
         console.log("You step on the brakes");
     }
 }
@@ -579,16 +585,201 @@ console.log(car1.year);
 car1.drive();
 
 // "this" keyword - refers to the object we are currently working with
-const  car2 = {
-    model:"Mustang",
-    color:"red",
-    year:2023,
-    drive:function (){
+const car2 = {
+    model: "Mustang",
+    color: "red",
+    year: 2023,
+    drive: function () {
         console.log(`You drive the ${this.model}`);
     },
-    brake:function () {
+    brake: function () {
         console.log("You step on the brakes");
     }
 }
 car2.drive();
+
+// class - a blueprint for creating objects
+// constructor - method of a class accepts arguments and assigns properties
+
+class Player {
+    score = 0;
+
+    pause() {
+        console.log("You paused the game")
+    }
+
+    exit() {
+        console.log("You exited the game")
+    }
+}
+
+let player1 = new Player();
+player1.score += 5;
+console.log(player1);
+player1.exit();
+player1.pause();
+
+class Student {
+
+    constructor(name, age) {
+        this.age = age;
+        this.name = name;
+    }
+
+    study() {
+        console.log(`${this.name} is studying`)
+    }
+}
+
+let student1 = new Student("Tetiana", 27);
+console.log(student1);
+student1.study();
+
+// static - belongs to the class, not the objects
+
+// class Car {
+//     static numberOfCars = 0;
+//     constructor(model) {
+//         this.model = model;
+//         Car.numberOfCars +=1;
+//     }
+// }
+//
+// const car3 = new Car("Mustang");
+// const car4 = new Car("Corvette");
+// const car5 = new Car("BMW");
+// console.log(Car.numberOfCars)
+
+// inheritance - a child class can inherit all the methods and properties from another class
+
+// class Animal {
+//     eat(){
+//         console.log(`This ${this.name} is eating`);
+//     }
+//     sleep(){
+//         console.log(`This ${this.name} is sleeping`)
+//     }
+// }
+//
+// class Rabbit extends Animal{
+//         name = 'rabbit';
+//
+//     run(){
+//         console.log(`This ${this.name} is running`)
+//     }
+// }
+//
+// let rabbit = new Rabbit();
+// rabbit.run();
+// rabbit.eat();
+// rabbit.sleep();
+
+// super keyword - refers to the parent class. Commonly used to invoke constructor of a parent class.
+
+class Animal {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+class Dog extends Animal {
+
+    constructor(name, age, runSpeed) {
+        super(name, age);
+        this.runSpeed = runSpeed;
+    }
+}
+
+let dog = new Dog("Big", 4, 20);
+console.log(dog);
+
+// get - binds an object property to a function when that property is accessed
+// set - binds an object property to a function when that property is assigned a value
+
+class Car {
+    constructor(power) {
+        this._power = power;
+        this._gas = 25;
+    }
+
+    get power() {
+        return `${this._power} hp`
+    }
+
+    get gas() {
+        return `${this._gas}L (${this._gas / 50 * 100})%`;
+    }
+
+    set gas(value) {
+        if (value > 50) {
+            this._gas = 50;
+        } else if (value < 0) {
+            this._gas = 0;
+        } else {
+            this._gas = value
+        }
+
+    }
+}
+
+let car6 = new Car(400);
+console.log(car6.power);
+car6.gas = -20;
+console.log(car6.gas)
+
+// anonymous objects - obj without a name, not directly referenced, no need for unique names
+
+class Card {
+    constructor(value, suit) {
+        this.value = value;
+        this.suit = suit;
+    }
+}
+
+let cards2 = [
+    new Card("A", "hearts"),
+    new Card("A","spades"),
+    new Card("A","diamonds"),
+    new Card("A","clubs")
+]
+
+cards2.forEach(card=> console.log(`${card.value} ${card.suit}`));
+
+// error - obj with a desc of smth went wrong (can't open a file, lose connection, user types incorrect input, type error)
+
+// try{
+//     let x =window.prompt("Enter a number");
+//     x = Number(x);
+//
+//     if (isNaN(x)) throw new Error("That wasn't a number!");
+//     if (x == "") throw new Error("That was empty");
+//
+//     console.log(`${x} is a number`)
+// } catch (e){
+//     console.log(e)
+// } finally {
+//     console.log("This always executes")
+// }
+
+// setTimeout - invokes a func after a number of milliseconds
+
+ // setTimeout(function () {
+ //     console.log("heloooooo")
+ // },3000);
+
+ // setInterval - repeatedly invokes a func after a number of milliseconds
+
+// let count2 = 0;
+// let max = 2;
+// const myTimer = setInterval(function () {
+//     count2 +=1;
+//     console.log(count2);
+//     if (count2>=max){
+//         clearInterval(myTimer);
+//         console.log('done')
+//     }
+// },1000)
+
+// Date object is used to work with dates and times
 

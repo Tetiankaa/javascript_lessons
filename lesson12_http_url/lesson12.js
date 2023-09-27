@@ -1,12 +1,12 @@
-// console.log(location.href);
-// let url = new URL(location.href);
-// console.log(url);
-//
-// console.log(url.searchParams);
-// url.searchParams.forEach((value, key, parent)=>{
-//     console.log(`Key: ${key}, Value: ${value}`)
-// })
-// console.log(url.searchParams.get('_ijt'));
+console.log(location.href);
+let url = new URL(location.href);
+console.log(url);
+
+console.log(url.searchParams);
+url.searchParams.forEach((value, key, parent)=>{
+    console.log(`Key: ${key}, Value: ${value}`)
+})
+console.log(url.searchParams.get('_ijt'));
 
 // fetch('https://dummyjson.com/quotes?limit=0&skip=0')
 //     .then(response=>response.json())
