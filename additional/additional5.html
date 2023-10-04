@@ -5,51 +5,118 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .timerBtn{
+            width: 80px;
+            height: 30px;
+            border: 3px solid;
+            border-radius: 12px;
+            background-color: #153677;
+            color: white;
+            cursor: pointer;
+            font-family: Consolas,monospace;
+        }
+        #timeDisplay{
+            font-size: 75px;
+            color: #153677 ;
+            font-family: Consolas,monospace;
+        }
+        #timeContainer{
+            text-align: center;
+            border: 3px solid;
+            border-radius: 25px;
+            background-color: #555555;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
-<p id="p1"></p>
+<!--<p id="p1"></p>-->
 
-<label id="label">Enter your name</label><br>
-<input type="text" id="text">
-<button id="button">submit</button>
-<br><br>
-<hr>
-<label>Side A:</label>
-<input type="text" id="aSide"><br>
-<label>Side B:</label>
-<input type="text" id="bSide"><br>
-<button id="btn">submit</button>
-<label id="cSide"></label>
+<!--<label id="label">Enter your name</label><br>-->
+<!--<input type="text" id="text">-->
+<!--<button id="button">submit</button>-->
+<!--<br><br>-->
+<!--<hr>-->
+<!--<label>Side A:</label>-->
+<!--<input type="text" id="aSide"><br>-->
+<!--<label>Side B:</label>-->
+<!--<input type="text" id="bSide"><br>-->
+<!--<button id="btn">submit</button>-->
+<!--<label id="cSide"></label>-->
 
-<hr>
-<label id="countLabel" style="font-size: 30px">0</label><br>
-<button id="decreaseBtn">decrease</button>
-<button id="resetBtn">reset</button>
-<button id="increaseBtn">increase</button>
-<hr>
-<label id="myRectangle"></label>
-<hr>
-<h1>Number guessing game</h1>
-<p>Enter a number between 1 and 10</p>
-<label>Enter a guess</label>
-<input id="number">
-<input type="submit" id="submitBtn" value="Submit">
-<hr>
+<!--<hr>-->
+<!--<label id="countLabel" style="font-size: 30px">0</label><br>-->
+<!--<button id="decreaseBtn">decrease</button>-->
+<!--<button id="resetBtn">reset</button>-->
+<!--<button id="increaseBtn">increase</button>-->
+<!--<hr>-->
+<!--<label id="myRectangle"></label>-->
+<!--<hr>-->
+<!--<h1>Number guessing game</h1>-->
+<!--<p>Enter a number between 1 and 10</p>-->
+<!--<label>Enter a guess</label>-->
+<!--<input id="number">-->
+<!--<input type="submit" id="submitBtn" value="Submit">-->
+<!--<hr>-->
 
-<h3>Enter a temperature:</h3>
-<input type="text" id="temp"><br>
-<label>Convert to:</label><br>
-<input type="radio" id="cItem" name="unit">
-<label for="cItem">Celsius</label>
-<br>
-<input type="radio" id="fItem" name="unit">
-<label for="fItem">Fahrenheit</label>
-<br>
-<input type="button" value="Submit" id="submitTemp">
-<label id="result"></label>
+<!--<h3>Enter a temperature:</h3>-->
+<!--<input type="text" id="temp"><br>-->
+<!--<label>Convert to:</label><br>-->
+<!--<input type="radio" id="cItem" name="unit">-->
+<!--<label for="cItem">Celsius</label>-->
+<!--<br>-->
+<!--<input type="radio" id="fItem" name="unit">-->
+<!--<label for="fItem">Fahrenheit</label>-->
+<!--<br>-->
+<!--<input type="button" value="Submit" id="submitTemp">-->
+<!--<label id="result"></label>-->
 
-<hr>
+<!--<hr>-->
+
+<!--<label id="oclock"></label>-->
+<!--<hr>-->
+<!--<h1 id="heading">Heading</h1>-->
+<!--<hr>-->
+<!--<label >-->
+<!--    <input type="text" name="fruits"  value="banana">-->
+<!--    <input type="text" name="fruits"  value="apple">-->
+<!--</label>-->
+
+<!--<ul id="fruits">-->
+<!--    <li>apple</li>-->
+<!--    <li>orange</li>-->
+<!--    <li>banana</li>-->
+<!--</ul>-->
+<!--<ul id="vegetables">-->
+<!--    <li>carrots</li>-->
+<!--    <li>potatoes</li>-->
+<!--    <li>onions</li>-->
+<!--</ul>-->
+
+<!--<button id="btn">click</button>-->
+<!--<div id="div-element" style="background: #abe8ab;width: 100px;height: 100px"></div>-->
+
+<!--<div id="outerDiv" style="background: #abe8ab;width: 200px;height: 200px">-->
+<!--    <div id="innerDiv" style="background: #abe8ab;width: 100px;height: 100px;border: 2px solid black"></div>-->
+<!--</div>-->
+
+<!--    <button id="mtBtn">toggle</button>-->
+<!--    <img src="images/mountains.jpg" alt="" style="width: 400px" id="image">-->
+
+<!--<div id="myDiv" style="width: 100px;height: 100px; background: #4e085f;position: relative"></div>-->
+<!--<button id="myBtn">click</button>-->
+
+<!--<canvas id="myCanvas" width="500" height="500" style="border: 1px solid"></canvas>-->
+
+<!--<button id="button">click</button>-->
+<!--<div id="timeContainer">-->
+<!--    <div id="timeDisplay">00:00:00</div>-->
+<!--    <button id="startButton" class="timerBtn">Start</button>-->
+<!--    <button id="pauseButton" class="timerBtn">Pause</button>-->
+<!--    <button id="resetButton" class="timerBtn">Reset</button>-->
+<!--</div>-->
+
 <script src="fromYoutube.js"></script>
 
 

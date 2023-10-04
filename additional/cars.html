@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cars</title>
+</head>
+<body>
+
+<form id="nameForm">
+    <input type="text" id="brand" placeholder="brand" minlength="1" maxlength="20" pattern="^[a-zA-Zа-яА-яёЁіІїЇ]{1,20}$" required>
+    <input type="number" id="price" placeholder="price" min="0" max="1000000" required>
+    <input type="number" id="year" placeholder="year" min="1990" max="2023" required>
+    <button>SUBMIT</button>
+</form>
+
+<div id="dataContainer"></div>
+<script src="cars.js"></script>
+</body>
+</html>

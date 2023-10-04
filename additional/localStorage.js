@@ -16,7 +16,7 @@ function showTasks() {
         li.appendChild(span);
         listContainer.appendChild(li);
 
-        if (item.checked || item.done){
+        if (item.done){
             li.classList.add('checked');
         }
 
